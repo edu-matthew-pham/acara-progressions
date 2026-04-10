@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACARA Progression Maps</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { font-family: system-ui, sans-serif; background: #f8f8f6; color: #2c2c2a; display: flex; flex-direction: column; }
+
+  /* ── Nav ── */
+  nav {
+    background: #2c2c2a; color: #fff;
+    display: flex; align-items: center; gap: 0;
+    padding: 0 16px; height: 48px; flex-shrink: 0;
+    overflow-x: auto; white-space: nowrap;
+  }
+  nav .brand {
+    font-size: 13px; font-weight: 600; color: #fff;
+    margin-right: 20px; flex-shrink: 0; text-decoration: none;
+  }
+  nav a {
+    font-size: 12px; color: #bbb; text-decoration: none;
+    padding: 0 14px; height: 48px; display: inline-flex;
+    align-items: center; border-bottom: 2px solid transparent;
+    transition: all .15s; flex-shrink: 0;
+  }
+  nav a:hover { color: #fff; }
+  nav a.active { color: #fff; border-bottom-color: #6BB5FF; }
+
+  /* ── Content ── */
+  .page { display: none; flex: 1; flex-direction: column; }
+  .page.active { display: flex; }
+
+  /* ── Landing ── */
+  .landing {
+    padding: 48px 32px; max-width: 720px; margin: 0 auto;
+  }
+  .landing h1 { font-size: 24px; font-weight: 500; margin-bottom: 8px; }
+  .landing p { font-size: 14px; color: #666; line-height: 1.7; margin-bottom: 32px; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  .card {
+    background: #fff; border: 1px solid #e0e0de; border-radius: 10px;
+    padding: 18px 20px; cursor: pointer; transition: all .15s;
+    text-decoration: none; color: inherit;
+  }
+  .card:hover { border-color: #aaa; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .card .subject { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+  .card .desc { font-size: 12px; color: #888; }
+  .card.coming-soon { opacity: 0.5; cursor: default; pointer-events: none; }
+
+  /* ── iFrame pages ── */
+  iframe {
+    width: 100%; flex: 1; border: none;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#" onclick="showPage('home')">ACARA Progressions</a>
+  <a href="#" onclick="showPage('home')"         id="nav-home"        class="active">Home</a>
+  <a href="#" onclick="showPage('science')"      id="nav-science"     >Science</a>
+  <a href="#" onclick="showPage('maths')"        id="nav-maths"       >Mathematics</a>
+  <a href="#" onclick="showPage('english')"      id="nav-english"     >English</a>
+  <a href="#" onclick="showPage('hass')"         id="nav-hass"        >HASS</a>
+  <a href="#" onclick="showPage('technologies')" id="nav-technologies">Technologies</a>
+  <a href="#" onclick="showPage('hpe')"          id="nav-hpe"         >Health &amp; PE</a>
+  <a href="#" onclick="showPage('arts')"         id="nav-arts"        >The Arts</a>
+  <a href="#" onclick="showPage('languages')"    id="nav-languages"   >Languages</a>
+</nav>
+
+<!-- Home -->
+<div class="page active" id="page-home">
+  <div class="landing">
+    <h1>ACARA Progression Maps</h1>
+    <p>
+      Interactive concept and capability progression maps for all Australian Curriculum v9
+      learning areas. Select a subject from the navbar or the cards below.
+    </p>
+    <div class="grid">
+      <a class="card" href="#" onclick="showPage('science')">
+        <div class="subject">Science</div>
+        <div class="desc">F–Y10 concept trees and capability sequences</div>
+      </a>
+      <a class="card" href="#" onclick="showPage('maths')">
+        <div class="subject">Mathematics</div>
+        <div class="desc">F–Y10 concept progressions across 6 strands</div>
+      </a>
+      <a class="card" href="#" onclick="showPage('english')">
+        <div class="subject">English</div>
+        <div class="desc">Language, Literature and Literacy — F–Y10</div>
+      </a>
+      <a class="card" href="#" onclick="showPage('hass')">
+        <div class="subject">HASS</div>
+        <div class="desc">History, Geography, Civics and Economics — F–Y10</div>
+      </a>
+      <a class="card" href="#" onclick="showPage('technologies')">
+        <div class="subject">Technologies</div>
+        <div class="desc">Design and Digital Technologies — F–Y9-10</div>
+      </a>
+      <a class="card" href="#" onclick="showPage('hpe')">
+        <div class="subject">Health &amp; PE</div>
+        <div class="desc">Health and Movement capability sequences — F–Y9-10</div>
+      </a>
+      <a class="card" href="#" onclick="showPage('arts')">
+        <div class="subject">The Arts</div>
+        <div class="desc">Dance, Drama, Media Arts, Music, Visual Arts — F–Y9-10</div>
+      </a>
+      <a class="card coming-soon" href="#">
+        <div class="subject">Languages</div>
+        <div class="desc">Coming soon</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Subject iframe pages -->
+<div class="page" id="page-science">
+  <iframe id="frame-science" src="" title="Science Progression Map"></iframe>
+</div>
+<div class="page" id="page-maths">
+  <iframe id="frame-maths" src="" title="Mathematics Progression Map"></iframe>
+</div>
+<div class="page" id="page-english">
+  <iframe id="frame-english" src="" title="English Progression Map"></iframe>
+</div>
+<div class="page" id="page-hass">
+  <iframe id="frame-hass" src="" title="HASS Progression Map"></iframe>
+</div>
+<div class="page" id="page-technologies">
+  <iframe id="frame-technologies" src="" title="Technologies Progression Map"></iframe>
+</div>
+<div class="page" id="page-hpe">
+  <iframe id="frame-hpe" src="" title="Health and PE Progression Map"></iframe>
+</div>
+<div class="page" id="page-arts">
+  <iframe id="frame-arts" src="" title="The Arts Progression Map"></iframe>
+</div>
+<div class="page" id="page-languages">
+  <div class="landing">
+    <h1>Languages</h1>
+    <p>Progression maps for Languages are coming soon.</p>
+  </div>
+</div>
+
+<script>
+const URLS = {
+  science:      'https://edu-matthew-pham.github.io/acara-science-progression/',
+  maths:        'https://edu-matthew-pham.github.io/acara-maths-progression/',
+  english:      'https://edu-matthew-pham.github.io/acara-english-progression/',
+  hass:         'https://edu-matthew-pham.github.io/acara-hass-progression/',
+  technologies: 'https://edu-matthew-pham.github.io/acara-tech-progression/',
+  hpe:          'https://edu-matthew-pham.github.io/acara-hpe-progression/',
+  arts:         'https://edu-matthew-pham.github.io/acara-arts-progression/',
+};
+
+// Lazy-load iframes on first visit
+const loaded = new Set();
+
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+
+  document.getElementById('page-' + name).classList.add('active');
+  document.getElementById('nav-' + name).classList.add('active');
+
+  // Load iframe src on first visit
+  if (URLS[name] && !loaded.has(name)) {
+    document.getElementById('frame-' + name).src = URLS[name];
+    loaded.add(name);
+  }
+
+  return false;
+}
+</script>
+
+</body>
+</html>
