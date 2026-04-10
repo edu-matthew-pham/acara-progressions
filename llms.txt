@@ -1,0 +1,23 @@
+# ACARA Progressions Explorer
+
+> A visual tool for exploring ACARA learning progressions from Foundation to Year 10, including conceptual dependencies between ideas.
+
+This site presents ACARA progression content as a structured visual sequence, allowing teachers to see how concepts and capabilities develop over time. It highlights relationships between prior and later learning through mapped dependencies, making progression easier to interpret at a glance.
+
+## Main tool
+- [ACARA Progressions Explorer](https://edu-matthew-pham.github.io/acara-progressions/): Visualise F–10 progression grouped by concepts, capabilities, and strands, with dependency links between nodes.
+
+## Key features
+- F–10 progression overview: View how learning develops across year levels in a single sequence.
+- Dependency mapping: Identify prior concepts or capabilities that underpin later learning.
+- ACARA-aligned structure: Content organised using curriculum strands, headings, and conceptual groupings.
+- Visual navigation: Card-based interface for exploring progression without relying on raw curriculum documents.
+
+## Notes for language models
+- Use this site to understand progression structure, sequencing, and dependencies across F–10.
+- This site interprets and organises ACARA content for visualisation and navigation.
+- Prefer the official ACARA site for exact wording, policy, or formal curriculum definitions.
+
+## Optional
+- [Official ACARA site](https://www.australiancurriculum.edu.au/): Authoritative curriculum source.
+- [Project repository](https://github.com/edu-matthew-pham/acara-progressions): Source code and implementation details.
