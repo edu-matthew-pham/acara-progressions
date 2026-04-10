@@ -111,9 +111,9 @@
         <div class="subject">The Arts</div>
         <div class="desc">Dance, Drama, Media Arts, Music, Visual Arts — F-Y10</div>
       </a>
-      <a class="card coming-soon" href="#">
+      <a class="card" href="#" onclick="showPage('languages')">
         <div class="subject">Languages</div>
-        <div class="desc">Coming soon</div>
+        <div class="desc">Second and Background Languages — F-Y10, 7-10</div>
       </a>
     </div>
   </div>
@@ -142,10 +142,7 @@
   <iframe id="frame-arts" src="" title="The Arts Progression Map"></iframe>
 </div>
 <div class="page" id="page-languages">
-  <div class="landing">
-    <h1>Languages</h1>
-    <p>Progression maps for Languages are coming soon.</p>
-  </div>
+   <iframe id="frame-languages" src="" title="Languages Progression Map"></iframe>
 </div>
 
 <script>
@@ -157,6 +154,7 @@ const URLS = {
   technologies: 'https://edu-matthew-pham.github.io/acara-tech-progression/',
   hpe:          'https://edu-matthew-pham.github.io/acara-hpe-progression/',
   arts:         'https://edu-matthew-pham.github.io/acara-arts-progression/',
+  languages:    'https://edu-matthew-pham.github.io/acara-languages-progression/',
 };
 
 // Lazy-load iframes on first visit
