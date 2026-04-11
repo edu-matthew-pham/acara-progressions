@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ACARA Progression Maps</title>
+<script data-goatcounter="https://edu-matthew-pham.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { height: 100%; }
@@ -182,6 +184,14 @@ function showPage(name) {
 
   document.getElementById('page-' + name).classList.add('active');
   document.getElementById('nav-' + name).classList.add('active');
+
+  // add site analytics
+  if (window.goatcounter) {
+    goatcounter.count({
+      path: '/' + name,
+      title: name + ' progression'
+    });
+  }
 
   // Load iframe src on first visit
   if (URLS[name] && !loaded.has(name)) {
